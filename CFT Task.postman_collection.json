@@ -1,0 +1,1551 @@
+{
+	"info": {
+		"_postman_id": "e7c2e7d2-4c5c-494f-82c2-454454e519e2",
+		"name": "CFT Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28460850",
+		"_collection_link": "https://lunar-resonance-396241.postman.co/workspace/SSA~a22699a6-892f-4860-b3e1-969a3d8823b4/collection/28460850-e7c2e7d2-4c5c-494f-82c2-454454e519e2?action=share&source=collection_link&creator=28460850"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Create Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_name\": \"category_name\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/category",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category_ame\": \"category_name\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/category",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "259"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"103-HuMcsbbk9TkMc5m9ZZMNXWaH47U\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 Apr 2024 18:09:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"\\\"category_name\\\" is required\",\n    \"error\": {\n        \"_original\": {\n            \"category_ame\": \"category_name\"\n        },\n        \"details\": [\n            {\n                \"message\": \"\\\"category_name\\\" is required\",\n                \"path\": [\n                    \"category_name\"\n                ],\n                \"type\": \"any.required\",\n                \"context\": {\n                    \"label\": \"category_name\",\n                    \"key\": \"category_name\"\n                }\n            }\n        ]\n    }\n}"
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category_name\": \"category_name\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/category",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "170"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"aa-rS1oBXh55KYmrudgTOraR2Aubd4\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 Apr 2024 18:42:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"category_name\": \"category_name\",\n        \"updatedAt\": \"2024-04-22T18:42:01.678Z\",\n        \"createdAt\": \"2024-04-22T18:42:01.678Z\"\n    },\n    \"message\": \"Category created successfully!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List All Category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_name\": \"category_name\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/categories",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category_name\": \"category_name\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "172"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ac-r9s66L0uCaDtqDeH8gq4+eCsWzc\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 Apr 2024 18:47:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"category_name\": \"category_name\",\n            \"createdAt\": \"2024-04-22T18:42:01.678Z\",\n            \"updatedAt\": \"2024-04-22T18:42:01.678Z\"\n        }\n    ],\n    \"message\": \"Category fetched successfully!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_name\": \"category_name1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/category/:categoryId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								":categoryId"
+							],
+							"variable": [
+								{
+									"key": "categoryId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "400 Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category_ame\": \"category_name\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/category",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "259"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"103-HuMcsbbk9TkMc5m9ZZMNXWaH47U\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 Apr 2024 18:09:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"\\\"category_name\\\" is required\",\n    \"error\": {\n        \"_original\": {\n            \"category_ame\": \"category_name\"\n        },\n        \"details\": [\n            {\n                \"message\": \"\\\"category_name\\\" is required\",\n                \"path\": [\n                    \"category_name\"\n                ],\n                \"type\": \"any.required\",\n                \"context\": {\n                    \"label\": \"category_name\",\n                    \"key\": \"category_name\"\n                }\n            }\n        ]\n    }\n}"
+						},
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category_name\": \"category_name\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/category",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "170"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"aa-rS1oBXh55KYmrudgTOraR2Aubd4\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 Apr 2024 18:42:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"category_name\": \"category_name\",\n        \"updatedAt\": \"2024-04-22T18:42:01.678Z\",\n        \"createdAt\": \"2024-04-22T18:42:01.678Z\"\n    },\n    \"message\": \"Category created successfully!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_name\": \"category_name\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/category/:categoryId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								":categoryId"
+							],
+							"variable": [
+								{
+									"key": "categoryId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category_name\": \"category_name\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "172"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ac-r9s66L0uCaDtqDeH8gq4+eCsWzc\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 Apr 2024 18:47:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"category_name\": \"category_name\",\n            \"createdAt\": \"2024-04-22T18:42:01.678Z\",\n            \"updatedAt\": \"2024-04-22T18:42:01.678Z\"\n        }\n    ],\n    \"message\": \"Category deleted successfully!\"\n}"
+						},
+						{
+							"name": "404 Not Found!",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category_name\": \"category_name\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/category/:categoryId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category",
+										":categoryId"
+									],
+									"variable": [
+										{
+											"key": "categoryId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-LkAWfYl5Gkn3jumHjZV0yt97MiQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 Apr 2024 19:49:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"category not found!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List Services Within a Category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_name\": \"category_name\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/category/:categoryId/services",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								":categoryId",
+								"services"
+							],
+							"variable": [
+								{
+									"key": "categoryId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "404 Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category_name\": \"category_name\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/category/:categoryId/services",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category",
+										":categoryId",
+										"services"
+									],
+									"variable": [
+										{
+											"key": "categoryId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-7pKJF8M/V2bKHqrJOIaiGGWo4Pg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 Apr 2024 19:51:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category not found!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Service",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_name\": \"category_name\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/category/:categoryId/services/:serviceId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								":categoryId",
+								"services",
+								":serviceId"
+							],
+							"variable": [
+								{
+									"key": "categoryId",
+									"value": "3"
+								},
+								{
+									"key": "serviceId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category_name\": \"category_name\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "172"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ac-r9s66L0uCaDtqDeH8gq4+eCsWzc\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 Apr 2024 18:47:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"category_name\": \"category_name\",\n            \"createdAt\": \"2024-04-22T18:42:01.678Z\",\n            \"updatedAt\": \"2024-04-22T18:42:01.678Z\"\n        }\n    ],\n    \"message\": \"Category deleted successfully!\"\n}"
+						},
+						{
+							"name": "404 Not Found!",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category_name\": \"category_name\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/category/:categoryId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category",
+										":categoryId"
+									],
+									"variable": [
+										{
+											"key": "categoryId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-LkAWfYl5Gkn3jumHjZV0yt97MiQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 Apr 2024 19:49:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"category not found!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Service",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"service_name\": \"name\",\r\n    \"type\": \"VIP\",\r\n    \"servicePriceOptions\": [\r\n        {\r\n            \"duration\": 2,\r\n            \"price\": 1299,\r\n            \"type\": \"Monthly\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/category/:categoryId/services",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								":categoryId",
+								"services"
+							],
+							"variable": [
+								{
+									"key": "categoryId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category_name\": \"category_name\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "172"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ac-r9s66L0uCaDtqDeH8gq4+eCsWzc\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 Apr 2024 18:47:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"CategoryId\": 3,\n        \"service_name\": \"name\",\n        \"type\": \"VIP\",\n        \"updatedAt\": \"2024-04-22T21:39:32.318Z\",\n        \"createdAt\": \"2024-04-22T21:39:32.318Z\"\n    },\n    \"message\": \"service created successfully!\"\n}"
+						},
+						{
+							"name": "404 Not Found!",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category_name\": \"category_name\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/category/:categoryId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category",
+										":categoryId"
+									],
+									"variable": [
+										{
+											"key": "categoryId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-LkAWfYl5Gkn3jumHjZV0yt97MiQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 Apr 2024 19:49:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"category not found!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Service",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"service_name\": \"name\",\r\n    \"type\": \"VIP\",\r\n    \"servicePriceOptions\": [\r\n        {\r\n            \"duration\": 2,\r\n            \"price\": 1299,\r\n            \"type\": \"Monthly\"\r\n        },\r\n        {\r\n            \"duration\": 1,\r\n            \"price\": 1299,\r\n            \"type\": \"Weekly\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/category/:categoryId/services/:serviceId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"category",
+								":categoryId",
+								"services",
+								":serviceId"
+							],
+							"variable": [
+								{
+									"key": "categoryId",
+									"value": "2"
+								},
+								{
+									"key": "serviceId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category_name\": \"category_name\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "172"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ac-r9s66L0uCaDtqDeH8gq4+eCsWzc\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 Apr 2024 18:47:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"category_name\": \"category_name\",\n            \"createdAt\": \"2024-04-22T18:42:01.678Z\",\n            \"updatedAt\": \"2024-04-22T18:42:01.678Z\"\n        }\n    ],\n    \"message\": \"Category deleted successfully!\"\n}"
+						},
+						{
+							"name": "404 Not Found!",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category_name\": \"category_name\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/category/:categoryId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"category",
+										":categoryId"
+									],
+									"variable": [
+										{
+											"key": "categoryId",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-LkAWfYl5Gkn3jumHjZV0yt97MiQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 Apr 2024 19:49:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"category not found!\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(response)"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@codesfortomorrow.com\",\r\n    \"password\": \"Admin123!@#\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Service",
+			"item": [
+				{
+					"name": "Create Service",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"service_name\": \"name\",\r\n    \"type\": \"VIP\",\r\n    \"CategoryId\": 3,\r\n    \"ServicePriceOptions\": [\r\n        {\r\n            \"duration\": 2,\r\n            \"price\": 1299,\r\n            \"type\": \"Weekly\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/service",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"service"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Service",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"service_name\": \"FULL stack\",\r\n    \"type\": \"VIP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/service/:serviceId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"service",
+								":serviceId"
+							],
+							"variable": [
+								{
+									"key": "serviceId",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List All Services",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"service_name\": \"FULL stack\",\r\n    \"type\": \"VIP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/services",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Service",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"service_name\": \"FULL stack\",\r\n    \"type\": \"VIP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/service/:serviceId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"service",
+								":serviceId"
+							],
+							"variable": [
+								{
+									"key": "serviceId",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Service",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"service_name\": \"FULL stack\",\r\n    \"type\": \"VIP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/service/:serviceId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"service",
+								":serviceId"
+							],
+							"variable": [
+								{
+									"key": "serviceId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Service Price Option",
+			"item": [
+				{
+					"name": "Create Service Price Option",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"duration\": 2,\r\n    \"price\": 1299,\r\n    \"type\": \"Weekly\",\r\n    \"ServiceId\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/price-option",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"price-option"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Service Price Option",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"service_name\": \"FULL stack\",\r\n    \"type\": \"VIP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/price-option/:priceOptionId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"price-option",
+								":priceOptionId"
+							],
+							"variable": [
+								{
+									"key": "priceOptionId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List All Service Price Options",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"service_name\": \"FULL stack\",\r\n    \"type\": \"VIP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/price-options",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"price-options"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Service Price Option",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"service_name\": \"FULL stack\",\r\n    \"type\": \"VIP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/price-option/:priceOptionId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"price-option",
+								":priceOptionId"
+							],
+							"variable": [
+								{
+									"key": "priceOptionId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzEzODIzNzYxLCJleHAiOjE3MTQ0Mjg1NjF9.nkjVshB7cTaYkP8dmlG0qj6LAVGFeJ1bwGNGw0vmzsA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:4567",
+			"type": "string"
+		}
+	]
+}
